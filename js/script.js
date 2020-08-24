@@ -1,33 +1,41 @@
 
 // Mail
 // Chiedi all’utente la sua email
-var email = prompt("Inserisci la tua mail");
+var email_utente = prompt("Inserisci la tua mail");
 // controlla che sia nella lista di chi può accedere e stampa un messaggio appropriato sull'esito del controllo.
 
 var listaMail = ["alessandro.boscato@gmail.com", "mario.rossi@gmail.com", "virginia.raggi@yahoo.it", "carlo.santana@hotmail.it", "pincopallo@outlook.it"];
 
-for(var i = 0; i < listaMail.length; i++) {
-if (email == listaMail[i]) {
-  console.log("Puoi accedere");
-} else {
-  alert("Mi dispiace, la tua mail non è presente nel database.");
+
+// Bisogna salvare l'informazione che la mail è stata trovata, altrimenti il ciclo for continua a girare
+
+var mail_trovata = false;
+for (var i = 0; i < listaMail.length; i++) {
+  if (email_utente == listaMail[i]) {
+    mail_trovata = true;
+  }
 }
+
+if (mail_trovata == true) {
+  console.log("Bravo");
+} else if (mail_trovata == false) {
+  console.log("mi disp");
 }
 
 // Gioco dei dadi
 // Generare un numero random da 1  a 6, sia per il giocatore sia per il computer
 
-var numeroG1 = Math.floor(Math.random() * 6 + 1);
-var numeroCPU = Math.floor(Math.random() * 6 + 1);
-
-// Stabilire il vincitore, in base a chi fa il punteggio più alto
-if (numeroG1 > numeroCPU) {
-  console.log("Complimenti! Hai vinto!");
-} else if (numeroG1 < numeroCPU) {
-  console.log("Mi dispiace, hai perso. Ritenta la fortuna!");
-} else {
-  console.log("Pari!");
-}
+// var numeroG1 = Math.floor(Math.random() * 6 + 1);
+// var numeroCPU = Math.floor(Math.random() * 6 + 1);
+//
+// // Stabilire il vincitore, in base a chi fa il punteggio più alto
+// if (numeroG1 > numeroCPU) {
+//   console.log("Complimenti! Hai vinto!");
+// } else if (numeroG1 < numeroCPU) {
+//   console.log("Mi dispiace, hai perso. Ritenta la fortuna!");
+// } else {
+//   console.log("Pari!");
+// }
 
 
 // Prima di partire a scrivere codice poniamoci qualche domanda:
