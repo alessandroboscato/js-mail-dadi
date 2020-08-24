@@ -6,7 +6,6 @@ var email_utente = prompt("Inserisci la tua mail");
 
 var listaMail = ["alessandro.boscato@gmail.com", "mario.rossi@gmail.com", "virginia.raggi@yahoo.it", "carlo.santana@hotmail.it", "pincopallo@outlook.it"];
 
-
 // Bisogna salvare l'informazione che la mail è stata trovata, altrimenti il ciclo for continua a girare
 
 var mail_trovata = false;
@@ -16,27 +15,31 @@ for (var i = 0; i < listaMail.length; i++) {
   }
 }
 
-if (mail_trovata == true) {
-  console.log("Bravo");
-} else if (mail_trovata == false) {
-  console.log("mi disp");
+if (mail_trovata == false) {
+  alert("La mail inserita non è presente nel database.");
 }
 
 // Gioco dei dadi
 // Generare un numero random da 1  a 6, sia per il giocatore sia per il computer
 
-// var numeroG1 = Math.floor(Math.random() * 6 + 1);
-// var numeroCPU = Math.floor(Math.random() * 6 + 1);
-//
-// // Stabilire il vincitore, in base a chi fa il punteggio più alto
-// if (numeroG1 > numeroCPU) {
-//   console.log("Complimenti! Hai vinto!");
-// } else if (numeroG1 < numeroCPU) {
-//   console.log("Mi dispiace, hai perso. Ritenta la fortuna!");
-// } else {
-//   console.log("Pari!");
-// }
+var genera = document.getElementById("genera");
+genera.addEventListener("click",
+function() {
 
+var numeroG1 = Math.floor(Math.random() * 6 + 1);
+var numeroCPU = Math.floor(Math.random() * 6 + 1);
+
+// Stabilire il vincitore, in base a chi fa il punteggio più alto
+if (numeroG1 > numeroCPU) {
+  document.getElementById("risultato").innerHTML = "Complimenti! Hai vinto!";
+} else if (numeroG1 < numeroCPU) {
+  document.getElementById("risultato").innerHTML = "Mi dispiace, hai perso. Ritenta la fortuna.";
+} else {
+  document.getElementById("risultato").innerHTML = "Pari!";
+}
+
+}
+)
 
 // Prima di partire a scrivere codice poniamoci qualche domanda:
 // Che ci sia un array da qualche parte?
