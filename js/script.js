@@ -1,20 +1,18 @@
-//
-// // Mail
-// // Chiedi all’utente la sua email
-// var email = prompt("Inserisci la tua mail");
-// // controlla che sia nella lista di chi può accedere e stampa un messaggio appropriato sull'esito del controllo.
-//
-// var listaMail = ["mario.rossi@gmail.com", "virginia.raggi@yahoo.it", "carlo.santana@hotmail.it", "pincopallo@outlook.it"];
-//
-// for(var i = 0; i < listaMail.length; i++) {
-// if (email == listaMail[i]) {
-//   console.log("Puoi accedere");
-// } else {
-//   alert("Attenzione! L'email inserita non è presente nel nostro database.")
-// }
-// }
 
+// Mail
+// Chiedi all’utente la sua email
+var email = prompt("Inserisci la tua mail");
+// controlla che sia nella lista di chi può accedere e stampa un messaggio appropriato sull'esito del controllo.
 
+var listaMail = ["alessandro.boscato@gmail.com", "mario.rossi@gmail.com", "virginia.raggi@yahoo.it", "carlo.santana@hotmail.it", "pincopallo@outlook.it"];
+
+for(var i = 0; i < listaMail.length; i++) {
+if (email == listaMail[i]) {
+  console.log("Puoi accedere");
+} else {
+  alert("Mi dispiace, la tua mail non è presente nel database.");
+}
+}
 
 // Gioco dei dadi
 // Generare un numero random da 1  a 6, sia per il giocatore sia per il computer
