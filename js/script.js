@@ -28,8 +28,10 @@ function() {
 
 var numeroG1 = Math.floor(Math.random() * 6 + 1);
 var numeroCPU = Math.floor(Math.random() * 6 + 1);
-
+document.getElementById("G1").innerHTML = numeroG1;
+document.getElementById("CPU").innerHTML = numeroCPU;
 // Stabilire il vincitore, in base a chi fa il punteggio più alto
+
 if (numeroG1 > numeroCPU) {
   document.getElementById("risultato").innerHTML = "Complimenti! Hai vinto!";
 } else if (numeroG1 < numeroCPU) {
@@ -37,7 +39,6 @@ if (numeroG1 > numeroCPU) {
 } else {
   document.getElementById("risultato").innerHTML = "Pari!";
 }
-
 }
 )
 
