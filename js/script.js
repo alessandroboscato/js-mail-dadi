@@ -6,7 +6,11 @@ var email = prompt("Inserisci la tua mail");
 var listaMail = ["mario.rossi@gmail.com", "virginia.raggi@yahoo.it", "carlo.santana@hotmail.it", "pincopallo@outlook.it"];
 
 for(var i = 0; i < listaMail.length; i++) {
-  var email == listaMail[i];
+if (email == listaMail[i]) {
+  console.log("Puoi accedere");
+} else {
+  alert("Attenzione! L'email inserita non è presente nel nostro database.")
+}
 }
 // stampa un messaggio appropriato sull’esito del controllo
 
